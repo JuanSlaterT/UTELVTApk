@@ -1,0 +1,1 @@
+export const CORRECT_LOGIN = "CORRECT_LOGIN"
