@@ -1,9 +1,9 @@
 import { Inter_400Regular, Itim_400Regular, useFonts } from '@expo-google-fonts/dev';
 import { NavigationContainer } from '@react-navigation/native';
-import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState } from 'react';
-import React, { StyleSheet, Text, View, Image, ActivityIndicator } from 'react-native';
+import React, { StyleSheet, Text, View, Image, ActivityIndicator, StatusBar } from 'react-native';
 import { AccountStack } from './screens/stacks/AccountStack';
+import EstudianteStack from './screens/stacks/EstudianteStack';
 import AppStates from './utils/AppStates';
 
 
@@ -45,6 +45,11 @@ export default function App() {
   })
 
   const RankPicker = () => {
+    return  <> 
+      {rank ? rank == "estudiante" ? <EstudianteStack/> : null : <EstudianteStack/>}
+    
+    </>
+
 
   }
   if (!fontsLoaded) {
@@ -54,7 +59,7 @@ export default function App() {
       <>
         <NavigationContainer>
           <AppStates>
-            <StatusBar style="auto" />
+            <StatusBar backgroundColor={"transparent"} />
             {load ? logged ? <RankPicker /> : <AccountStack /> : <View style={styles.container}>
               <View>
                 <Image source={require("./assets/utelvt-logo.png")}

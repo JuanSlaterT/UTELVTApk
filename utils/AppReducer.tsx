@@ -1,4 +1,4 @@
-import { CORRECT_LOGIN } from "./AppTypes";
+import { CORRECT_LOGIN, LOGOUT } from "./AppTypes";
 
 export default function AppReducer(state: any, action: any){
     const { payload, type } = action;
@@ -7,6 +7,11 @@ export default function AppReducer(state: any, action: any){
             return {
                 ...state,
                 usuario: payload,
+            }
+        case LOGOUT:
+            return {
+                ... state,
+                usuario: undefined
             }
     }
 }

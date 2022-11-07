@@ -1,7 +1,7 @@
-import { useCallback, useMemo, useReducer } from "react"
+import React, { useCallback, useMemo, useReducer } from "react"
 import AppContext from "./AppContext";
 import AppReducer from "./AppReducer";
-import { CORRECT_LOGIN } from "./AppTypes";
+import { CORRECT_LOGIN, LOGOUT } from "./AppTypes";
 
 export default function AppStates({ children }) {
     const initialState = useMemo(
@@ -17,11 +17,19 @@ export default function AppStates({ children }) {
         global.setLogged(true)
     }, [])
 
+    const handleLogOut = useCallback(async (values: any) => {
+        dispatch({ type: LOGOUT })
+        global.setLogged(false)
+        global.setRank(null)
+       
+    }, [])
+
     return (
         <AppContext.Provider
             value={{
                 usuario: state.usuario,
-                handleLogIn
+                handleLogIn,
+                handleLogOut
             }}
         >
             {children}

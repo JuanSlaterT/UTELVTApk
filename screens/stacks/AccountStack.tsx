@@ -9,7 +9,8 @@ export const AccountStack = () => {
                 name="Login"
                 component={Login}
                 options={{
-                    headerShown: false
+                    headerShown: false,
+                    animationTypeForReplace: "pop"
                 }}
             />
         </Stack.Navigator>
