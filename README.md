@@ -27,9 +27,9 @@ Esta aplicación es desarrollada con el framework de [React], te dejo este apart
 
 [React]: https://reactnative.dev/docs/environment-setup
 
-Una vez instalado todos los requisitos para poder inicializar nuestro proyecto, clonamos este repositorio, abrimos una consola de comandos en nuestro directorio donde está clonado el repositorio y ejecutamos el comando "yarn install" p "npm install" para poder instalar todas las dependencias en modo de librería usadas y consideradas para la creación de esta demo proyecto. Esto puede llegar a tardar más de 10 minutos dependiendo lal computadora o la conexión a internet.
+Una vez instalado todos los requisitos para poder inicializar nuestro proyecto, clonamos este repositorio, abrimos una consola de comandos en nuestro directorio donde está clonado el repositorio y ejecutamos el comando "yarn install" en caso de que hayas instalado Yarn o "npm install" para poder instalar todas las dependencias en modo de librería usadas y consideradas para la creación de esta demo proyecto. Esto puede llegar a tardar más de 10 minutos dependiendo lal computadora o la conexión a internet.
 
-Una vex instaladas las respectivas librerías, podemos levantar un servidor NodeJS con el comando "expo start", esperamos unos minutos hasta que nos muestre un código QR e instalamos la aplicación [Expo App] en nuestro celular, se lo puede encontrar directamente en la Play Store.
+Una vex instaladas las respectivas librerías, podemos levantar un servidor NodeJS con el comando "yarn start" en caso de que hayas instalado Yarn, o "expo start", esperamos unos minutos hasta que nos muestre un código QR e instalamos la aplicación [Expo App] en nuestro celular, se lo puede encontrar directamente en la Play Store.
 
 [Expo App]: https://play.google.com/store/apps/details?id=host.exp.exponent&hl=es_EC&gl=US&pli=1
 
